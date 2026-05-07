@@ -1,0 +1,123 @@
+/* BeeFintech concept system — shared CSS */
+:root {
+  --bee-50:  #eef4ff;
+  --bee-100: #dbe8ff;
+  --bee-200: #bcd3ff;
+  --bee-300: #8db5ff;
+  --bee-400: #5a8eff;
+  --bee-500: #2563ff;   /* primary brand */
+  --bee-600: #1f4cd8;
+  --bee-700: #1a3aaa;
+  --bee-800: #122b7a;
+  --bee-900: #0a1840;
+  --bee-ink: #0b1628;
+  --ink-2: #2c3a52;
+  --ink-3: #5b6a85;
+  --ink-4: #8a98ad;
+  --line: #e5ebf3;
+  --line-2: #eef2f7;
+  --paper: #f6f8fc;
+  --paper-2: #fbfcfe;
+  --accent: #ffd84d;     /* honey accent, used very sparingly */
+  --good: #00b884;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', 'PingFang SC', 'PingFang HK', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'cv11', 'ss01', 'ss03', 'tnum';
+  color: var(--bee-ink);
+  background: #f3f5f9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Reusable bits ─────────────────────────────────── */
+.bee-logo {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, #4d8bff 0%, #2563ff 60%, #1a3aaa 100%);
+  border-radius: 7px;
+  position: relative;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 6px 14px -6px #2563ff66;
+}
+.bee-logo::before, .bee-logo::after {
+  content: ''; position: absolute; inset: 0;
+}
+.bee-logo::before {
+  background:
+    linear-gradient(135deg, transparent 38%, rgba(255,255,255,0.55) 38%, rgba(255,255,255,0.55) 50%, transparent 50%),
+    linear-gradient(135deg, transparent 62%, rgba(0,0,0,0.18) 62%, rgba(0,0,0,0.18) 74%, transparent 74%);
+  border-radius: 7px;
+}
+.bee-wordmark {
+  font-family: 'Inter', system-ui;
+  font-weight: 700; letter-spacing: -0.02em;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+
+/* ── iPhone shell (compact, used in canvas mockups) ── */
+.iphone {
+  width: 280px; height: 580px;
+  background: #0b1628;
+  border-radius: 38px;
+  padding: 9px;
+  box-shadow:
+    0 0 0 1.5px #0b1628,
+    0 30px 60px -20px rgba(11,22,40,0.35),
+    0 12px 30px -10px rgba(11,22,40,0.25);
+  position: relative;
+}
+.iphone::before {
+  content: ''; position: absolute;
+  top: 14px; left: 50%; transform: translateX(-50%);
+  width: 92px; height: 28px;
+  background: #0b1628;
+  border-radius: 18px;
+  z-index: 5;
+}
+.iphone-screen {
+  width: 100%; height: 100%;
+  border-radius: 30px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  display: flex; flex-direction: column;
+}
+.iphone-statusbar {
+  height: 44px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 22px 6px;
+  font-size: 13px; font-weight: 600;
+}
+.iphone-content { flex: 1; overflow: hidden; position: relative; }
+
+/* ── Browser chrome for desktop screenshot panels ── */
+.chrome {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -30px rgba(11,22,40,0.35), 0 8px 20px -10px rgba(11,22,40,0.15);
+  overflow: hidden;
+}
+.chrome-bar {
+  height: 30px;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f8 100%);
+  border-bottom: 1px solid var(--line);
+  display: flex; align-items: center;
+  padding: 0 12px; gap: 6px;
+}
+.chrome-bar .dot { width: 10px; height: 10px; border-radius: 50%; }
+.chrome-bar .dot.r { background: #ff5f57; }
+.chrome-bar .dot.y { background: #ffbd2e; }
+.chrome-bar .dot.g { background: #28ca42; }
+.chrome-bar .url {
+  margin-left: 12px;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 6px; padding: 3px 10px;
+  font-size: 11px; color: var(--ink-3);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* tiny utility */
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.tnum { font-variant-numeric: tabular-nums; }
+.muted { color: var(--ink-3); }
