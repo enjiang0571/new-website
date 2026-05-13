@@ -28,10 +28,13 @@
       color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow-x: hidden;
-      zoom: 0.9;
+      zoom: 1.1;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
+
+    html { padding-top: 0; }
+    body { padding-top: 64px; }
 
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
@@ -160,7 +163,7 @@
     }
 
     .section {
-      padding: 88px 0;
+      padding: 64px 0;
       border-top: 1px solid var(--line);
       background: var(--paper);
     }
@@ -172,7 +175,7 @@
     }
 
     .hero {
-      padding: 88px 0 64px;
+      padding: 18px 0 44px;
     }
 
     .hero-inner {
@@ -181,7 +184,7 @@
       padding: 0 56px;
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(330px, 1fr);
-      gap: 64px;
+      gap: 52px;
       align-items: end;
     }
 
@@ -190,7 +193,7 @@
       align-items: center;
       gap: 8px;
       padding: 6px 12px;
-      margin-bottom: 28px;
+      margin-bottom: 16px;
       border-radius: 999px;
       background: var(--blue-soft);
       color: var(--blue-deep);
@@ -217,7 +220,7 @@
     h1 {
       max-width: 760px;
       margin-bottom: 0;
-      font-size: clamp(64px, 5.85vw, 84px);
+      font-size: clamp(56px, 5.2vw, 76px);
       line-height: 0.98;
       letter-spacing: -0.035em;
       font-weight: 650;
@@ -249,14 +252,14 @@
 
     .hero-copy {
       max-width: 560px;
-      margin: 28px 0 0;
+      margin: 22px 0 0;
       font-size: 19px;
     }
 
     .actions {
       display: flex;
       gap: 12px;
-      margin-top: 36px;
+      margin-top: 24px;
       flex-wrap: wrap;
     }
 
@@ -292,14 +295,14 @@
     }
 
     .stat-row {
-      padding: 16px 0;
+      padding: 13px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .stat-row:last-child { border-bottom: 0; }
 
     .stat-number {
-      font-size: 38px;
+      font-size: 34px;
       line-height: 1;
       letter-spacing: -0.025em;
       font-weight: 800;
@@ -320,7 +323,7 @@
     .approval-inner {
       width: min(100%, 1328px);
       margin: 0 auto;
-      padding: 24px 56px;
+      padding: 18px 56px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -341,13 +344,13 @@
 
     .ai-demo {
       display: grid;
-      grid-template-columns: minmax(620px, 1fr) minmax(640px, 1.18fr);
-      gap: 64px;
+      grid-template-columns: minmax(500px, 1fr) minmax(420px, 540px);
+      gap: 30px;
       align-items: start;
     }
 
     .ai-copy h2 {
-      max-width: 760px;
+      max-width: 620px;
       font-size: clamp(28px, 3vw, 44px);
       line-height: 1.04;
       letter-spacing: -0.035em;
@@ -360,14 +363,15 @@
     }
 
     .ai-copy .lead {
-      max-width: 500px;
+      max-width: 470px;
       margin-top: 20px;
       font-size: 18px;
     }
 
     .demo-card {
       width: 100%;
-      justify-self: stretch;
+      max-width: 540px;
+      justify-self: start;
       overflow: hidden;
       background: var(--surface);
       border: 1px solid var(--line);
@@ -381,7 +385,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding: 14px 18px;
+      padding: 12px 16px;
       border-bottom: 1px solid var(--line);
       font-size: 13px;
     }
@@ -389,11 +393,11 @@
     .demo-tabs {
       justify-content: flex-start;
       flex-wrap: wrap;
-      padding: 18px;
+      padding: 14px;
     }
 
     .chip {
-      padding: 8px 14px;
+      padding: 7px 12px;
       border: 1px solid var(--line);
       border-radius: 999px;
       background: #fff;
@@ -410,15 +414,15 @@
       font-weight: 700;
     }
 
-    .demo-body { padding: 18px; }
+    .demo-body { padding: 14px; }
     .demo-label { margin-bottom: 6px; color: var(--muted); font-size: 12px; }
     .chat-input-panel {
       display: grid;
-      grid-template-columns: 1fr 42px;
+      grid-template-columns: 1fr 32px;
       align-items: end;
-      gap: 12px;
-      margin-bottom: 14px;
-      padding: 14px;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding: 9px 10px;
       border: 1px solid #c9dcf7;
       border-radius: 12px;
       background: #fff;
@@ -433,29 +437,29 @@
 
     .chat-input-wrap label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       color: var(--muted);
       font-size: 13px;
     }
 
     .chat-question {
       width: 100%;
-      min-height: 34px;
+      min-height: 26px;
       border: 0;
       outline: 0;
       resize: none;
       color: var(--ink);
       background: transparent;
       font: inherit;
-      font-size: 18px;
-      line-height: 1.35;
+      font-size: 15px;
+      line-height: 1.32;
     }
 
     .chat-question::placeholder { color: #98a3b7; }
 
     .chat-submit {
-      width: 34px;
-      height: 34px;
+      width: 28px;
+      height: 28px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -486,6 +490,55 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       font-size: 12px;
+    }
+
+
+    .scenario-card,
+    .answer-chat {
+      display: grid;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .scenario-line {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      align-items: center;
+      gap: 12px;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .scenario-bar {
+      height: 8px;
+      background: var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .scenario-bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue), #5eead4);
+      border-radius: inherit;
+    }
+
+    .answer-bubble {
+      max-width: 92%;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .answer-bubble.user {
+      justify-self: end;
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
     }
 
     .demo-foot {
@@ -547,7 +600,7 @@
       align-items: end;
       justify-content: space-between;
       gap: 32px;
-      margin-bottom: 56px;
+      margin-bottom: 38px;
     }
 
     .section-head p {
@@ -561,8 +614,8 @@
     .phone-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      margin-bottom: 80px;
+      gap: 32px;
+      margin-bottom: 56px;
     }
 
     .phone-cell { min-width: 0; }
@@ -713,7 +766,7 @@
     .web-console {
       display: grid;
       grid-template-columns: 380px 1fr;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
     }
 
@@ -743,8 +796,8 @@
       width: 1120px;
       max-width: none;
       height: 500px;
-      margin-left: 150px;
-      transform: scale(0.8);
+      margin-left: 64px;
+      transform: scale(0.72);
       transform-origin: left center;
       overflow: hidden;
       border-radius: 12px;
@@ -916,7 +969,7 @@
     }
 
     .dash-main {
-      width: 900px;
+      width: 780px;
       padding: 22px 24px;
       overflow: visible;
     }
@@ -941,7 +994,7 @@
     }
 
     .kpi {
-      padding: 16px;
+      padding: 14px;
       border: 1px solid var(--line);
       border-radius: 10px;
       background: #fff;
@@ -966,7 +1019,7 @@
 
     .chart-card {
       display: grid;
-      grid-template-columns: 665px 210px;
+      grid-template-columns: 500px 210px;
       gap: 14px;
     }
 
@@ -1022,9 +1075,9 @@
       gap: 24px;
     }
 
-    .capability-grid { margin-top: 56px; }
-    .quote-grid { margin-top: 48px; }
-    .awards-grid { margin-top: 48px; gap: 20px; }
+    .capability-grid { margin-top: 36px; }
+    .quote-grid { margin-top: 34px; }
+    .awards-grid { margin-top: 34px; gap: 20px; }
 
     .card,
     .capability,
@@ -1054,7 +1107,7 @@
     .split {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
-      gap: 56px;
+      gap: 44px;
       align-items: start;
     }
 
@@ -1079,7 +1132,7 @@
     }
 
     .award-card {
-      padding: 16px;
+      padding: 14px;
       text-align: center;
       box-shadow: 0 4px 16px -8px rgba(11, 22, 40, 0.08);
     }
@@ -1094,7 +1147,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
-      margin-top: 32px;
+      margin-top: 24px;
       font-size: 14px;
     }
 
@@ -1111,7 +1164,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 32px;
-      padding: 88px 56px;
+      padding: 62px 56px;
       background: var(--blue);
       color: #fff;
     }
@@ -1125,7 +1178,7 @@
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
-      padding: 30px 56px;
+      padding: 24px 56px;
       background: var(--ink);
       color: var(--paper);
       font-size: 13px;
@@ -1174,8 +1227,8 @@
     }
 
     .modal-close {
-      width: 34px;
-      height: 34px;
+      width: 28px;
+      height: 28px;
       border: 1px solid var(--line);
       border-radius: 999px;
       background: #fff;
@@ -1190,6 +1243,12 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 18px 22px;
       padding: 28px;
+    }
+
+    .demo-form.compact {
+      grid-template-columns: 1fr;
+      max-width: 620px;
+      margin: 0 auto;
     }
 
     .form-field {
@@ -1283,7 +1342,6 @@
       .demo-form { grid-template-columns: 1fr; }
       .modal-backdrop { padding: 18px; }
     }
-
     @media (max-width: 920px) {
       .topnav { padding: 0 24px; }
       .topnav { padding: 0; }
@@ -1315,16 +1373,157 @@
       h1 { font-size: 52px; }
       .ai-copy h2 { font-size: clamp(24px, 5.2vw, 42px); }
     }
+
+
+
+    @media (max-width: 768px) {
+      body { zoom: 1; }
+      .section,
+      .hero,
+      .cta { padding: 48px 0; }
+      .inner,
+      .hero-inner { padding: 0 22px; }
+      .hero-inner,
+      .ai-demo,
+      .web-console,
+      .split,
+      .section-head,
+      .cta {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 30px;
+      }
+      .hero-inner { align-items: start; }
+      .ai-title-line { white-space: normal; }
+      .demo-card { max-width: none; justify-self: stretch; }
+      .approval-inner {
+        padding: 16px 22px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px 18px;
+      }
+      .phone-grid,
+      .capability-grid,
+      .quote-grid,
+      .awards-grid,
+      .security-grid,
+      .company-facts,
+      .product-cards { grid-template-columns: 1fr; }
+      .iphone { width: min(100%, 250px); margin-bottom: 20px; }
+      .web-console { align-items: start; overflow: hidden; }
+      .browser-shell {
+        width: 1120px;
+        max-width: none;
+        height: 500px;
+        margin-left: 0;
+        transform: none;
+        transform-origin: left top;
+        zoom: .6;
+      }
+      .policy-mix { display: block; }
+      .modal-backdrop { padding: 18px; align-items: flex-start; }
+      .demo-modal { max-height: calc(100vh - 36px); }
+    }
+
+    @media (max-width: 640px) and (min-width: 481px) {
+      .browser-shell { zoom: .5; }
+    }
+
+    @media (max-width: 560px) and (min-width: 481px) {
+      .browser-shell { zoom: .42; }
+    }
+
+    @media (max-width: 380px) {
+      .browser-shell { zoom: .27; }
+    }
+
+    @media (max-width: 340px) {
+      .browser-shell { zoom: .25; }
+    }
+    @media (max-width: 480px) {
+      body { padding-top: 58px; }
+      .topnav { height: 58px; }
+      .topnav-inner { padding: 0 16px; gap: 12px; }
+      .nav-left { gap: 0; }
+      .logo { width: 112px; height: 28px; }
+      .nav-right { gap: 10px; }
+      .language-toggle { font-size: 13px; }
+      .language-menu { right: 0; }
+      .demo-btn { height: 32px; padding: 0 12px; font-size: 12px; }
+      .section,
+      .hero,
+      .cta { padding: 42px 0; }
+      .inner,
+      .hero-inner { padding: 0 18px; }
+      .hero-inner { gap: 28px; }
+      .trust-pill { margin-bottom: 14px; font-size: 11px; }
+      h1 { font-size: clamp(39px, 13vw, 48px); line-height: 1; letter-spacing: -0.045em; }
+      h2 { font-size: clamp(30px, 9vw, 38px); }
+      .hero-copy,
+      .lead { font-size: 16px; line-height: 1.55; }
+      .actions { width: 100%; flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-stats { padding-left: 18px; }
+      .stat-row { padding: 10px 0; }
+      .stat-number { font-size: 30px; }
+      .approval-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 14px 18px;
+        gap: 10px 14px;
+        font-size: 12px;
+      }
+      .approval-inner span:first-child { grid-column: 1 / -1; }
+      .section-head { margin-bottom: 30px; }
+      .demo-header { padding: 12px 14px; }
+      .demo-tabs { padding: 12px; gap: 8px; }
+      .chip { padding: 7px 10px; font-size: 12px; }
+      .demo-body { padding: 12px; }
+      .chat-input-panel { grid-template-columns: 1fr 30px; padding: 9px; }
+      .chat-question { font-size: 14px; }
+      .chat-submit { width: 28px; height: 28px; }
+      .result-panel { padding: 12px; }
+      .browser-shell {
+        width: 1120px;
+        height: 500px;
+        transform: none;
+        zoom: .30;
+      }
+      .capability,
+      .security-card,
+      .quote-card { padding: 20px; }
+      .award-card img { height: 130px; }
+      .cta { padding: 42px 18px; }
+      .footer { padding: 22px 18px; }
+      .modal-head { padding: 20px 18px 0; }
+      .modal-head h3 { font-size: 24px; }
+      .demo-form { padding: 20px 18px; }
+      .form-field input,
+      .form-field select { height: 48px; }
+      .submit-demo { height: 50px; }
+      .demo-success { padding: 44px 24px 48px; }
+      .demo-success p { font-size: 18px; }
+    }
+
+    @media (max-width: 380px) {
+      .browser-shell { zoom: .27; }
+    }
+
+    @media (max-width: 340px) {
+      .browser-shell { zoom: .25; }
+    }
+    /* late narrow mobile dashboard override */
   </style>
 </head>
-<body>
+<body id="home">
   <header class="topnav">
     <div class="topnav-inner">
       <div class="nav-left">
         <img class="logo" src="assets/beefintech-logo@4x.png" alt="BeeFintech" />
         <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#platform">Platform</a>
+          <a href="#home">Home</a>
           <a href="#ai-broker">AI Broker</a>
+          <a href="#platform">Platform</a>
           <a href="#security">Security</a>
           <a href="#customers">Customers</a>
           <a href="#company">Company</a>
@@ -1347,7 +1546,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div>
-        <div class="trust-pill">Approved by YF Life · FWD · China Life Strategic Partner</div>
+        <div class="trust-pill">Built for Hong Kong insurance brokerage teams</div>
         <h1>The InsurTech<br>platform Hong Kong's<br>brokers <span class="blue">trust.</span></h1>
         <p class="hero-copy">Nine years. 150+ broker firms. 130+ insurers. Zero breaches. 95% of customers renew, every year.</p>
         <div class="actions">
@@ -1367,7 +1566,7 @@
 
   <div class="approval-strip">
     <div class="approval-inner">
-      <span>Approved by</span><span>YF Life</span><span>FWD</span><span>中國人壽 (海外)</span><span>HKSTP</span><span>HK ICT 2020</span><span>Microsoft Azure</span><span>Alibaba Cloud HK</span>
+      <span>Built for</span><span>Broker operations</span><span>Private deployment</span><span>Policy lifecycle</span><span>AI workflow demo</span><span>Data residency</span><span>Audit trail</span><span>Integration-ready</span>
     </div>
   </div>
 
@@ -1376,7 +1575,7 @@
       <div class="ai-copy">
         <p class="eyebrow">Try it now</p>
         <h2><span class="ai-title-line">Don't&nbsp;take&nbsp;our&nbsp;word&nbsp;for&nbsp;it.</span><span class="muted">Try our AI.</span></h2>
-        <p class="lead">Five live demos, free, anonymous. The same AI engine 20,000+ insurance professionals use every day.</p>
+        <p class="lead">A guided aichatbot demo for broker workflows. Free to try, anonymous, and designed for public website evaluation.</p>
       </div>
       <div class="demo-card">
         <div class="demo-header">
@@ -1384,7 +1583,7 @@
           <span class="muted"><span>Credits</span> <strong class="blue" id="chatCredits">3 / 3</strong></span>
         </div>
         <div class="demo-tabs">
-          <button class="chip active" type="button">Compare products</button><button class="chip" type="button">Generate proposal</button><button class="chip" type="button">Visualize a scenario</button><button class="chip" type="button">Ask Bee anything</button>
+          <button class="chip active" type="button" data-ai-mode="compare">Compare products</button><button class="chip" type="button" data-ai-mode="visualize">Visualize a scenario</button><button class="chip" type="button" data-ai-mode="ask">Ask Bee anything</button>
         </div>
         <div class="demo-body">
           <form class="chat-input-panel" id="chatForm">
@@ -1395,13 +1594,7 @@
             <button class="chat-submit" type="submit" aria-label="Submit question">→</button>
           </form>
           <div class="demo-label blue" id="chatAnswerLabel"><strong>Bee AI · 642ms</strong></div>
-          <div class="result-panel" id="chatAnswer">
-            <div class="product-cards">
-              <div class="mini-card"><strong>ManuRetire 5</strong><div class="muted">HK$4800/mo</div><div class="bar"><span style="width:78%"></span></div><div class="muted">fit score</div></div>
-              <div class="mini-card"><strong>AIA Pro Annuity</strong><div class="muted">HK$5200/mo</div><div class="bar"><span style="width:86%"></span></div><div class="muted">fit score</div></div>
-              <div class="mini-card"><strong>FWD Easy Save</strong><div class="muted">HK$4400/mo</div><div class="bar"><span style="width:64%"></span></div><div class="muted">fit score</div></div>
-            </div>
-          </div>
+          <div class="result-panel" id="chatAnswer"></div>
           <div class="demo-foot">
             <span>⚡&lt;800ms</span>
             <span>🔒 No data stored</span>
@@ -1419,7 +1612,7 @@
           <p class="eyebrow product-eyebrow">The product · Mobile + Web in sync</p>
           <h2>From client onboarding<br>to electronic signature.</h2>
         </div>
-        <p>FNA · proposal · AML · underwriting · settlement — the entire chain on one phone, mirrored on a manager-grade web console. Used daily by 200,000+ HK professionals.</p>
+        <p>FNA · onboarding · underwriting support · servicing · settlement — the workflow chain on one phone, mirrored on a manager-grade web console.</p>
       </div>
 
       <div class="phone-grid">
@@ -1442,18 +1635,18 @@
         <article class="phone-cell">
           <div class="iphone dark">
             <div class="screen">
-              <div class="phone-status"><span>9:41</span><span>AI Proposal</span></div>
+              <div class="phone-status"><span>9:41</span><span>AI Assist</span></div>
               <p class="muted">Last 19 min</p>
-              <h3>Age 35, married, 2 kids<br>Budget HK$ 5,000/mo · Retirement</h3>
-              <div class="dark-row"><b>YF Life · MY Retirement</b><span>92%</span></div>
-              <div class="dark-row"><b>ManuLife · Income Plus</b><span>87%</span></div>
-              <div class="dark-row"><b>CTF · Harvest Savings</b><span>82%</span></div>
-              <div class="btn btn-primary" style="width:100%;margin-top:16px">Export PDF Proposal</div>
+              <h3>Sample profile<br>Retirement planning scenario</h3>
+              <div class="dark-row"><b>Retirement savings option</b><span>92%</span></div>
+              <div class="dark-row"><b>Annuity income option</b><span>87%</span></div>
+              <div class="dark-row"><b>Whole-life savings option</b><span>82%</span></div>
+              <div class="btn btn-primary" style="width:100%;margin-top:16px">View workflow summary</div>
             </div>
           </div>
           <div class="phone-caption-line"><span>02</span><span></span></div>
-          <h3>AI Proposal</h3>
-          <p>3-min personalised proposals across 4,400+ products. RAG/KAG-grounded.</p>
+          <h3>AI Assist</h3>
+          <p>Illustrative AI assistance for comparing product categories and next-step workflow.</p>
         </article>
         <article class="phone-cell">
           <div class="iphone">
@@ -1484,7 +1677,7 @@
             <div class="browser-url"><div class="url-pill">app.beefintech.hk/dashboard</div></div>
           </div>
           <div class="dashboard">
-            <aside class="sidebar"><div class="side-brand"><span class="side-logo"></span><strong>LifeBee</strong></div><div class="side-item active"><span class="side-icon">▥</span>Dashboard</div><div class="side-item"><span class="side-icon">♟</span>Clients</div><div class="side-item"><span class="side-icon">□</span>FNA & Proposals</div><div class="side-item"><span class="side-icon">◻</span>Policies</div><div class="side-item"><span class="side-icon">♜</span>Commissions</div><div class="side-item"><span class="side-icon">▰</span>Analytics</div><div class="side-item"><span class="side-icon">✦</span>AI Broker<span class="new-pill">NEW</span></div></aside>
+            <aside class="sidebar"><div class="side-brand"><span class="side-logo"></span><strong>LifeBee</strong></div><div class="side-item active"><span class="side-icon">▥</span>Dashboard</div><div class="side-item"><span class="side-icon">♟</span>Clients</div><div class="side-item"><span class="side-icon">□</span>FNA & Workflows</div><div class="side-item"><span class="side-icon">◻</span>Policies</div><div class="side-item"><span class="side-icon">♜</span>Commissions</div><div class="side-item"><span class="side-icon">▰</span>Analytics</div><div class="side-item"><span class="side-icon">✦</span>AI Broker<span class="new-pill">NEW</span></div></aside>
             <main class="dash-main"><h3>Dashboard</h3><div class="dash-subtitle">2026 Q4 · New hour</div><div class="kpis"><div class="kpi">Active policies<strong>1,247</strong><span>↑ 8.2%</span></div><div class="kpi">New this month<strong>83</strong><span>↑ 12.4%</span></div><div class="kpi">Renewal rate<strong>96.4%</strong><span>↑ 1.2pp</span></div></div><div class="chart-card"><div class="chart"><div class="chart-head"><strong>New policies · last 30 days</strong><span class="chart-currency">HK$</span></div><svg class="chart-line" viewBox="0 0 760 160" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="dashArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2f7cff" stop-opacity=".24"/><stop offset="1" stop-color="#2f7cff" stop-opacity=".02"/></linearGradient></defs><g stroke="#e8edf5" stroke-width="1"><path d="M70 6V148M150 6V148M230 6V148M310 6V148M390 6V148M470 6V148M550 6V148M630 6V148M710 6V148"/></g><path d="M70 122L100 108L132 114L166 94L202 100L238 74L272 80L306 52L340 58L374 36L410 42L444 28L480 36L516 20L552 42L590 30L628 16L664 24L706 12L706 148L70 148Z" fill="url(#dashArea)"/><path d="M70 122L100 108L132 114L166 94L202 100L238 74L272 80L306 52L340 58L374 36L410 42L444 28L480 36L516 20L552 42L590 30L628 16L664 24L706 12" fill="none" stroke="#2f7cff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="policy-mix"><strong>Policy mix</strong><p>Life & Savings</p><div class="mix-bar"><span style="width:86%"></span></div><p>Critical Illness</p><div class="mix-bar"><span style="width:42%;background:#10b981"></span></div><p>Medical</p><div class="mix-bar"><span style="width:27%;background:#f59e0b"></span></div><p>Other</p><div class="mix-bar"><span style="width:18%;background:#94a3b8"></span></div></div></div></main>
           </div>
         </div>
@@ -1498,10 +1691,10 @@
       <h2>One workspace, the entire <span class="blue">policy lifecycle.</span></h2>
       <div class="capability-grid">
         <article class="capability"><div class="badge">1</div><h3>LifeBee CRM</h3><p>Client onboarding, FNA, e-signature, KYC. Mobile + web, in sync.</p></article>
-        <article class="capability"><div class="badge">2</div><h3>LifeBee EBA</h3><p>E-Business Application — proposal to issuance, paperless.</p></article>
+        <article class="capability"><div class="badge">2</div><h3>LifeBee EBA</h3><p>E-Business Application — application to issuance, paperless.</p></article>
         <article class="capability"><div class="badge">3</div><h3>LifeBee POS</h3><p>Policy admin & service, renewals, claims, commissions.</p></article>
         <article class="capability"><div class="badge">4</div><h3>LifeBee BI</h3><p>Realtime dashboards across firm performance.</p></article>
-        <article class="capability"><div class="badge">5</div><h3>Bee AI Broker</h3><p>RAG/KAG engine — compare 4,400+ products in seconds.</p></article>
+        <article class="capability"><div class="badge">5</div><h3>Bee AI Broker</h3><p>RAG/KAG engine — compare approved product categories in seconds.</p></article>
         <article class="capability"><div class="badge">6</div><h3>LifeBee Quote</h3><p>Multi-insurer quoting & illustration in one click.</p></article>
       </div>
     </div>
@@ -1509,10 +1702,10 @@
 
   <section class="section" id="security">
     <div class="inner split">
-      <div><p class="eyebrow">Security</p><h2>Eight years.<br>Zero breaches.</h2><p class="lead">Hong Kong residency, end-to-end encryption, every action audited. Trusted with 100,000+ policies/day.</p></div>
+      <div><p class="eyebrow">Security</p><h2>Security by design.<br>Built for trust.</h2><p class="lead">Hong Kong residency options, encryption, role control, and audit trail patterns for regulated broker workflows.</p></div>
       <div class="security-grid">
         <article class="security-card"><h3>HK PDPO</h3><p>Full compliance, all data resides in Hong Kong.</p></article>
-        <article class="security-card"><h3>ISO 27001</h3><p>In progress. SOC 2 Type II annual review.</p></article>
+        <article class="security-card"><h3>ISO 27001</h3><p>ISO 27001 readiness work in progress.</p></article>
         <article class="security-card"><h3>Encryption</h3><p>AES-256 at rest, TLS 1.3 in flight.</p></article>
         <article class="security-card"><h3>Audit trail</h3><p>Every read/write signed, 7-year retention.</p></article>
       </div>
@@ -1535,15 +1728,15 @@
     <div class="inner">
       <div class="section-head">
         <div><p class="eyebrow awards-eyebrow">Awards & Credentials</p><h2><span class="blue">2017</span> · Hong Kong InsurTech, recognised.</h2></div>
-        <p>Founded in 2017 at HKSTP. Trusted by 160+ broker firms across Hong Kong, Macau and Singapore. Government-vetted, insurer-approved.</p>
+        <p>Founded in Hong Kong and focused on insurance workflow digitisation for broker teams and ecosystem partners.</p>
       </div>
       <div class="awards-grid">
         <article class="award-card"><img src="assets/award-hkstp.png" alt="HKSTP InnoCentre Resident"><p>HKSTP InnoCentre Resident</p></article>
         <article class="award-card"><img src="assets/award-itc-tvp.png" alt="ITC TVP Qualified Vendor"><p>ITC TVP Qualified Vendor</p></article>
         <article class="award-card"><img src="assets/award-ict-2020.png" alt="HK ICT Awards 2020"><p>HK ICT Awards 2020</p></article>
-        <article class="award-card"><img src="assets/award-alibaba.png" alt="Alibaba Cloud HK Strategic Partner"><p>Alibaba Cloud HK · Strategic Partner</p></article>
+        <article class="award-card"><img src="assets/award-cloud-programme.png" alt="Cloud ecosystem programme"><p>Cloud ecosystem programme</p></article>
         <article class="award-card"><img src="assets/award-dbiz.png" alt="Government D-Biz Vendor"><p>Government D-Biz Vendor</p></article>
-        <article class="award-card"><img src="assets/award-manulife.png" alt="Manulife BOOST Finalist"><p>Manulife BOOST · Finalist</p></article>
+        <article class="award-card"><img src="assets/award-accelerator-finalist.png" alt="Accelerator programme finalist"><p>Accelerator programme · Finalist</p></article>
       </div>
     </div>
   </section>
@@ -1551,17 +1744,18 @@
   <section class="section" id="company">
     <div class="inner split">
       <div><p class="eyebrow">Company</p><h2>From HKSTP InnoCentre, since 2017.</h2></div>
-      <div><p class="company-copy">BeeFintech is Hong Kong's leading insurance SaaS, recognised by HK ICT Awards 2020 and incubated at HKSTP. We exist to make insurance professionals 10× more effective — without compromising on trust.</p><div class="company-facts"><div><div class="fact-label">HQ</div>Unit 505, InnoCentre, Kowloon Tong</div><div><div class="fact-label">Founded</div>2017</div><div><div class="fact-label">Team</div>40+ engineers & insurance experts</div><div><div class="fact-label">Backed by</div>HKSTP, Microsoft, Alibaba Cloud</div></div></div>
+      <div><p class="company-copy">BeeFintech builds insurance workflow technology for broker teams and ecosystem partners. This demo site presents the product vision, interaction model, and public-facing conversion flow.</p><div class="company-facts"><div><div class="fact-label">HQ</div>Unit 505, InnoCentre, Kowloon Tong</div><div><div class="fact-label">Founded</div>2017</div><div><div class="fact-label">Team</div>40+ engineers & insurance experts</div><div><div class="fact-label">Ecosystem</div>Insurance, technology, and operations partners</div></div></div>
     </div>
   </section>
 
   <section class="cta" id="book-demo">
-    <h2>Ready to see Bee AI on your book of business?</h2>
+    <h2>Ready to see Bee AI in your brokerage workflow?</h2>
     <div class="actions" style="margin-top:0"><a class="btn btn-primary" href="#ai-broker">Try Bee AI →</a><a class="btn btn-secondary" href="#book-demo">Book a demo</a></div>
   </section>
 
+  <div class="footer" style="border-top:1px solid var(--line);background:#f8fbff;color:#5b677a">Demo content shown for illustration only. Not insurance, investment, or product advice. Public demo data is not a production service claim.</div>
   <footer class="footer">
-    <span><i class="footer-dot"></i>HK PDPO compliant</span><span><i class="footer-dot" style="background:#ef4444"></i>All data in Hong Kong</span><span><i class="footer-dot" style="background:#f59e0b"></i>ISO 27001 in progress</span><span><i class="footer-dot" style="background:#22c55e"></i>YF Life & FWD approved</span><span><i class="footer-dot"></i>All systems operational · 99.99% uptime</span>
+    <span><i class="footer-dot"></i>HK PDPO compliant</span><span><i class="footer-dot" style="background:#ef4444"></i>All data in Hong Kong</span><span><i class="footer-dot" style="background:#f59e0b"></i>ISO 27001 in progress</span><span><i class="footer-dot" style="background:#22c55e"></i>Demo content only</span><span><i class="footer-dot"></i>Static demo · no production claim</span>
   </footer>
   <div class="modal-backdrop" id="demoModal" aria-hidden="true">
     <div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
@@ -1569,14 +1763,10 @@
         <h3 id="demoModalTitle">Book a demo</h3>
         <button class="modal-close" type="button" aria-label="Close demo form">×</button>
       </div>
-      <form class="demo-form" id="demoForm">
+      <form class="demo-form compact" id="demoForm">
         <label class="form-field"><span class="field-label">Name <span class="required">*</span></span><input type="text" name="name" placeholder="Enter your name" required></label>
-        <label class="form-field"><span class="field-label">Company name <span class="required">*</span></span><input type="text" name="company" placeholder="Enter company name" required></label>
-        <label class="form-field"><span class="field-label">Position <span class="required">*</span></span><input type="text" name="role" placeholder="Enter your position" required></label>
         <label class="form-field"><span class="field-label">Mobile number <span class="required">*</span></span><input type="tel" name="phone" placeholder="Enter mobile number" required></label>
-        <label class="form-field"><span class="field-label">Email address</span><input type="email" name="email" placeholder="Enter email address"></label>
-        <label class="form-field"><span class="field-label">Product module</span><select name="module"><option value="">Select product module</option><option>LifeBee CRM</option><option>LifeBee EBA</option><option>LifeBee POS</option><option>LifeBee BI</option><option>Bee AI Broker</option><option>LifeBee Quote</option></select></label>
-        <label class="form-field full"><span class="field-label">Remarks</span><textarea name="message" placeholder="Tell us your needs or questions"></textarea></label>
+        <label class="form-field"><span class="field-label">Email address <span class="required">*</span></span><input type="email" name="email" placeholder="Enter email address" required></label>
         <button class="submit-demo" type="submit">Submit demo request →</button>
       </form>
       <div class="demo-success" id="demoSuccess" aria-live="polite">
@@ -1588,13 +1778,14 @@
   <script>
     const translations = {
       "zh-Hans": {
-        "Platform": "平台",
+        
+        "Home": "首页","Platform": "平台",
         "AI Broker": "AI 经纪助手",
         "Security": "安全",
         "Customers": "客户",
         "Company": "公司",
         "Book a demo": "预约演示",
-        "Approved by YF Life · FWD · China Life Strategic Partner": "获 YF Life · FWD · 中国人寿战略伙伴认可",
+        "Built for Hong Kong insurance brokerage teams": "为香港保险经纪团队打造",
         "The InsurTech": "香港经纪人信赖的",
         "platform Hong Kong's": "保险科技平台",
         "brokers": "",
@@ -1603,19 +1794,26 @@
         "Try Bee AI — no signup →": "试用 Bee AI — 无需注册 →",
         "Try Bee AI →": "试用 Bee AI →",
         "Trust, in numbers": "信任，来自数字",
-        "annual renewal rate": "年度续约率",
-        "zero data breaches": "零数据泄露",
-        "long-term life broker share": "长期寿险经纪份额",
-        "pros use our AI daily": "专业人士每日使用 AI",
-        "Approved by": "认可机构",
+        "deployment option": "年度续约率",
+        "data residency ready": "零数据泄露",
+        "shared-code architecture": "长期寿险经纪份额",
+        "AI workflow preview": "专业人士每日使用 AI",
+        "Built for": "适用场景",
+        "Broker operations": "经纪业务运营",
+        "Private deployment": "私有化部署",
+        "Policy lifecycle": "保单生命周期",
+        "AI workflow demo": "AI 工作流演示",
+        "Data residency": "数据驻留",
+        "Audit trail": "审计记录",
+        "Integration-ready": "可对接集成",
         "Try it now": "立即试用",
         "Don't\u00a0take\u00a0our\u00a0word\u00a0for\u00a0it.": "别只听我们说。",
         "Try our AI.": "试试我们的 AI。",
-        "Five live demos, free, anonymous. The same AI engine 20,000+ insurance professionals use every day.": "五个在线演示，免费、匿名。与 20,000+ 保险专业人士每天使用的是同一套 AI 引擎。",
+        "A guided aichatbot demo for broker workflows. Free to try, anonymous, and designed for public website evaluation.": "三个在线演示，免费、匿名。与 Demo 保险专业人士每天使用的是同一套 AI 引擎。",
         "Bee AI · ready": "Bee AI · 就绪",
         "Credits": "额度",
         "Compare products": "比较产品",
-        "Generate proposal": "生成建议书",
+        "Workflow summary": "生成流程摘要",
         "Visualize a scenario": "可视化方案",
         "Ask Bee anything": "向 Bee 提问",
         "You": "你",
@@ -1627,7 +1825,7 @@
         "The product · Mobile + Web in sync": "产品 · 手机与网页同步",
         "From client onboarding": "从客户开户",
         "to electronic signature.": "到电子签名。",
-        "FNA · proposal · AML · underwriting · settlement — the entire chain on one phone, mirrored on a manager-grade web console. Used daily by 200,000+ HK professionals.": "FNA、建议书、AML、核保、结算，全流程在手机端完成，并同步到经理级网页控制台。20 万+ 香港专业人士日常使用。",
+        "FNA · onboarding · underwriting support · servicing · settlement — the workflow chain on one phone, mirrored on a manager-grade web console.": "FNA、流程摘要、AML、核保、结算，全流程在手机端完成，并同步到经理级网页控制台。20 万+ 香港专业人士日常使用。",
         "Completed": "已完成",
         "Basic Information": "基本资料",
         "Financial Needs Analysis": "财务需要分析",
@@ -1638,12 +1836,12 @@
         "Signed": "已签署",
         "FNA Overview": "FNA 总览",
         "Five-step FNA, signed-and-locked. PIBA-2023 aligned, 7-year audit log.": "五步 FNA，签署后锁定。符合 PIBA-2023，保留 7 年审计记录。",
-        "AI Proposal": "AI 建议书",
+        "AI Assist": "AI 流程摘要",
         "Last 19 min": "过去 19 分钟",
         "Age 35, married, 2 kids": "35 岁，已婚，2 个孩子",
         "Budget HK$ 5,000/mo · Retirement": "预算 HK$5,000/月 · 退休",
-        "Export PDF Proposal": "导出 PDF 建议书",
-        "3-min personalised proposals across 4,400+ products. RAG/KAG-grounded.": "覆盖 4,400+ 产品，3 分钟生成个性化建议书。基于 RAG/KAG。",
+        "View workflow summary": "查看流程摘要",
+        "Illustrative AI assistance for comparing product categories and next-step workflow.": "用于演示产品类别比较和下一步流程提醒的 AI 辅助。",
         "Policies": "保单",
         "Renewals due": "待续保",
         "Underwriting": "核保",
@@ -1658,7 +1856,7 @@
         "process automation": "流程自动化",
         "Dashboard": "仪表盘",
         "Clients": "客户",
-        "FNA & Proposals": "FNA 与建议书",
+        "FNA & Workflows": "FNA 与流程摘要",
         "Commissions": "佣金",
         "Analytics": "分析",
         "NEW": "新",
@@ -1675,40 +1873,46 @@
         "One workspace, the entire": "一个工作空间，覆盖完整",
         "policy lifecycle.": "保单生命周期。",
         "Client onboarding, FNA, e-signature, KYC. Mobile + web, in sync.": "客户开户、FNA、电子签名、KYC。手机与网页同步。",
-        "E-Business Application — proposal to issuance, paperless.": "电子业务申请，从建议书到出单，全程无纸化。",
+        "E-Business Application — application to issuance, paperless.": "电子业务申请，从流程摘要到出单，全程无纸化。",
         "Policy admin & service, renewals, claims, commissions.": "保单管理与服务、续保、理赔、佣金。",
         "Realtime dashboards across firm performance.": "公司绩效实时仪表盘。",
-        "RAG/KAG engine — compare 4,400+ products in seconds.": "RAG/KAG 引擎，数秒比较 4,400+ 产品。",
+        "RAG/KAG engine — compare approved product categories in seconds.": "RAG/KAG 引擎，数秒比较已授权产品类别。",
         "Multi-insurer quoting & illustration in one click.": "一键完成多保险公司报价与说明。",
         "Eight years.": "八年。",
-        "Zero breaches.": "零数据泄露。",
-        "Hong Kong residency, end-to-end encryption, every action audited. Trusted with 100,000+ policies/day.": "数据驻留香港，端到端加密，每个操作均可审计。每天处理 100,000+ 保单。",
+        "Security by design.": "以安全为设计原则。",
+        "Hong Kong residency options, encryption, role control, and audit trail patterns for regulated broker workflows.": "可选香港数据驻留、加密、权限控制与审计记录模式。",
         "Full compliance, all data resides in Hong Kong.": "全面合规，所有数据驻留香港。",
-        "In progress. SOC 2 Type II annual review.": "推进中。SOC 2 Type II 年度审查。",
+        "ISO 27001 readiness work in progress.": "ISO 27001 准备工作推进中。",
         "AES-256 at rest, TLS 1.3 in flight.": "静态 AES-256 加密，传输 TLS 1.3。",
         "Audit trail": "审计记录",
         "Every read/write signed, 7-year retention.": "每次读写均签名，保留 7 年。",
         "150+ broker firms.": "150+ 经纪公司。",
-        "One trusted backbone.": "同一个可信底座。",
         "\"3-min proposals replaced 3-hour spreadsheets. We doubled new-client capacity.\"": "“3 分钟建议书替代了 3 小时表格。我们的新客承接能力翻倍了。”",
         "Director, mid-size HK broker firm": "香港中型经纪公司董事",
         "\"95% renewal rate isn't marketing — it's a year-on-year audit number.\"": "“95% 续约率不是营销话术，而是逐年审计数字。”",
         "COO, bancassurance group": "银行保险集团 COO",
-        "\"The AI catches policy mismatches our junior advisors used to miss.\"": "“AI 能发现初级顾问过去容易漏掉的保单不匹配。”",
         "Head of Compliance, MPF firm": "MPF 公司合规负责人",
+        "Broker teams.": "经纪团队。",
+        "One trusted backbone.": "同一个可信底座。",
+        "Client operations run from one shared workspace.": "客户导入、服务和保单运营可在同一个共享工作区中管理。",
+        "Use case · Operations team": "香港中型经纪公司董事",
+        "Structured workflows help teams reduce manual follow-up and improve renewal visibility.": "结构化工作流帮助团队减少人工跟进，并提升续保可见性。",
+        "Use case · Management team": "银行保险集团 COO",
+        "\"The AI catches policy mismatches our junior advisors used to miss.\"": "“AI 能发现初级顾问过去容易漏掉的保单不匹配。”",
+        "Use case · Compliance team": "MPF 公司合规负责人",
         "Awards & Credentials": "奖项与资质",
         "2017": "2017",
         "· Hong Kong InsurTech, recognised.": " · 获认可的香港保险科技。",
-        "Founded in 2017 at HKSTP. Trusted by 160+ broker firms across Hong Kong, Macau and Singapore. Government-vetted, insurer-approved.": "2017 年创立于 HKSTP。获得香港、澳门、新加坡 160+ 经纪公司信任。政府认可，保险公司批准。",
+        "Founded in Hong Kong and focused on insurance workflow digitisation for broker teams and ecosystem partners.": "专注为保险经纪团队和生态伙伴提供保险工作流数字化能力。",
         "From HKSTP InnoCentre, since 2017.": "2017 年起，来自 HKSTP InnoCentre。",
-        "BeeFintech is Hong Kong's leading insurance SaaS, recognised by HK ICT Awards 2020 and incubated at HKSTP. We exist to make insurance professionals 10× more effective — without compromising on trust.": "BeeFintech 是香港领先的保险 B2B PaaS，获 HK ICT Awards 2020 认可，并由 HKSTP 孵化。我们的目标是在不牺牲信任的前提下，让保险专业人士效率提升 10 倍。",
+        "BeeFintech builds insurance workflow technology for broker teams and ecosystem partners. This demo site presents the product vision, interaction model, and public-facing conversion flow.": "BeeFintech 为保险经纪团队和生态伙伴建设保险工作流技术。此演示站展示产品愿景、交互模型和预约转化流程。",
         "HQ": "总部",
         "Unit 505, InnoCentre, Kowloon Tong": "九龙塘 InnoCentre 505 室",
         "Founded": "成立",
         "Team": "团队",
         "40+ engineers & insurance experts": "40+ 工程师与保险专家",
         "Backed by": "支持方",
-        "Ready to see Bee AI on your book of business?": "准备看看 Bee AI 如何服务你的业务组合了吗？",
+        "Ready to see Bee AI in your brokerage workflow?": "准备看看 Bee AI 如何服务你的业务组合了吗？",
         "Name": "姓名",
         "Company name": "公司名称",
         "Position": "职位",
@@ -1728,17 +1932,18 @@
         "HK PDPO compliant": "符合香港 PDPO",
         "All data in Hong Kong": "所有数据位于香港",
         "ISO 27001 in progress": "ISO 27001 推进中",
-        "YF Life & FWD approved": "YF Life 与 FWD 认可",
-        "All systems operational · 99.99% uptime": "所有系统运行正常 · 99.99% 可用率"
+        "Demo content only": "仅作演示内容",
+        "Static demo · no production claim": "静态演示 · 非生产承诺"
       },
       "zh-Hant": {
-        "Platform": "平台",
+        
+        "Home": "首頁","Platform": "平台",
         "AI Broker": "AI 經紀助手",
         "Security": "安全",
         "Customers": "客戶",
         "Company": "公司",
         "Book a demo": "預約演示",
-        "Approved by YF Life · FWD · China Life Strategic Partner": "獲 YF Life · FWD · 中國人壽策略夥伴認可",
+        "Built for Hong Kong insurance brokerage teams": "為香港保險經紀團隊打造",
         "The InsurTech": "香港經紀人信賴的",
         "platform Hong Kong's": "保險科技平台",
         "brokers": "",
@@ -1747,19 +1952,26 @@
         "Try Bee AI — no signup →": "試用 Bee AI — 無需註冊 →",
         "Try Bee AI →": "試用 Bee AI →",
         "Trust, in numbers": "信任，來自數字",
-        "annual renewal rate": "年度續約率",
-        "zero data breaches": "零資料外洩",
-        "long-term life broker share": "長期壽險經紀份額",
-        "pros use our AI daily": "專業人士每日使用 AI",
-        "Approved by": "認可機構",
+        "deployment option": "年度續約率",
+        "data residency ready": "零資料外洩",
+        "shared-code architecture": "長期壽險經紀份額",
+        "AI workflow preview": "專業人士每日使用 AI",
+        "Built for": "適用場景",
+        "Broker operations": "經紀業務營運",
+        "Private deployment": "私有化部署",
+        "Policy lifecycle": "保單生命週期",
+        "AI workflow demo": "AI 工作流演示",
+        "Data residency": "資料駐留",
+        "Audit trail": "審計記錄",
+        "Integration-ready": "可對接整合",
         "Try it now": "立即試用",
         "Don't\u00a0take\u00a0our\u00a0word\u00a0for\u00a0it.": "別只聽我們說。",
         "Try our AI.": "試試我們的 AI。",
-        "Five live demos, free, anonymous. The same AI engine 20,000+ insurance professionals use every day.": "五個線上演示，免費、匿名。與 20,000+ 保險專業人士每天使用的是同一套 AI 引擎。",
+        "A guided aichatbot demo for broker workflows. Free to try, anonymous, and designed for public website evaluation.": "三個線上演示，免費、匿名。與 Demo 保險專業人士每天使用的是同一套 AI 引擎。",
         "Bee AI · ready": "Bee AI · 就緒",
         "Credits": "額度",
         "Compare products": "比較產品",
-        "Generate proposal": "生成建議書",
+        "Workflow summary": "生成流程摘要",
         "Visualize a scenario": "可視化方案",
         "Ask Bee anything": "向 Bee 提問",
         "You": "你",
@@ -1771,7 +1983,7 @@
         "The product · Mobile + Web in sync": "產品 · 手機與網頁同步",
         "From client onboarding": "從客戶開戶",
         "to electronic signature.": "到電子簽名。",
-        "FNA · proposal · AML · underwriting · settlement — the entire chain on one phone, mirrored on a manager-grade web console. Used daily by 200,000+ HK professionals.": "FNA、建議書、AML、核保、結算，全流程在手機端完成，並同步到經理級網頁控制台。20 萬+ 香港專業人士日常使用。",
+        "FNA · onboarding · underwriting support · servicing · settlement — the workflow chain on one phone, mirrored on a manager-grade web console.": "FNA、流程摘要、AML、核保、結算，全流程在手機端完成，並同步到經理級網頁控制台。20 萬+ 香港專業人士日常使用。",
         "Completed": "已完成",
         "Basic Information": "基本資料",
         "Financial Needs Analysis": "財務需要分析",
@@ -1782,12 +1994,12 @@
         "Signed": "已簽署",
         "FNA Overview": "FNA 總覽",
         "Five-step FNA, signed-and-locked. PIBA-2023 aligned, 7-year audit log.": "五步 FNA，簽署後鎖定。符合 PIBA-2023，保留 7 年審計記錄。",
-        "AI Proposal": "AI 建議書",
+        "AI Assist": "AI 流程摘要",
         "Last 19 min": "過去 19 分鐘",
         "Age 35, married, 2 kids": "35 歲，已婚，2 個孩子",
         "Budget HK$ 5,000/mo · Retirement": "預算 HK$5,000/月 · 退休",
-        "Export PDF Proposal": "匯出 PDF 建議書",
-        "3-min personalised proposals across 4,400+ products. RAG/KAG-grounded.": "覆蓋 4,400+ 產品，3 分鐘生成個人化建議書。基於 RAG/KAG。",
+        "View workflow summary": "匯出 PDF 流程摘要",
+        "Illustrative AI assistance for comparing product categories and next-step workflow.": "用於演示產品類別比較和下一步流程提醒的 AI 輔助。",
         "Policies": "保單",
         "Renewals due": "待續保",
         "Underwriting": "核保",
@@ -1802,7 +2014,7 @@
         "process automation": "流程自動化",
         "Dashboard": "儀表板",
         "Clients": "客戶",
-        "FNA & Proposals": "FNA 與建議書",
+        "FNA & Workflows": "FNA 與流程摘要",
         "Commissions": "佣金",
         "Analytics": "分析",
         "NEW": "新",
@@ -1819,39 +2031,45 @@
         "One workspace, the entire": "一個工作空間，覆蓋完整",
         "policy lifecycle.": "保單生命週期。",
         "Client onboarding, FNA, e-signature, KYC. Mobile + web, in sync.": "客戶開戶、FNA、電子簽名、KYC。手機與網頁同步。",
-        "E-Business Application — proposal to issuance, paperless.": "電子業務申請，從建議書到出單，全程無紙化。",
+        "E-Business Application — application to issuance, paperless.": "電子業務申請，從申請到出單，全程無紙化。",
         "Policy admin & service, renewals, claims, commissions.": "保單管理與服務、續保、理賠、佣金。",
         "Realtime dashboards across firm performance.": "公司績效即時儀表板。",
-        "RAG/KAG engine — compare 4,400+ products in seconds.": "RAG/KAG 引擎，數秒比較 4,400+ 產品。",
+        "RAG/KAG engine — compare approved product categories in seconds.": "RAG/KAG 引擎，數秒比較已授權產品類別。",
         "Multi-insurer quoting & illustration in one click.": "一鍵完成多保險公司報價與說明。",
         "Eight years.": "八年。",
-        "Zero breaches.": "零資料外洩。",
-        "Hong Kong residency, end-to-end encryption, every action audited. Trusted with 100,000+ policies/day.": "資料駐留香港，端到端加密，每個操作均可審計。每天處理 100,000+ 保單。",
+        "Security by design.": "以安全為設計原則。",
+        "Hong Kong residency options, encryption, role control, and audit trail patterns for regulated broker workflows.": "可選香港資料駐留、加密、權限控制與審計記錄模式。",
         "Full compliance, all data resides in Hong Kong.": "全面合規，所有資料駐留香港。",
-        "In progress. SOC 2 Type II annual review.": "推進中。SOC 2 Type II 年度審查。",
+        "ISO 27001 readiness work in progress.": "ISO 27001 準備工作推進中。",
         "AES-256 at rest, TLS 1.3 in flight.": "靜態 AES-256 加密，傳輸 TLS 1.3。",
         "Audit trail": "審計記錄",
         "Every read/write signed, 7-year retention.": "每次讀寫均簽名，保留 7 年。",
         "150+ broker firms.": "150+ 經紀公司。",
-        "One trusted backbone.": "同一個可信底座。",
-        "\"3-min proposals replaced 3-hour spreadsheets. We doubled new-client capacity.\"": "「3 分鐘建議書取代了 3 小時表格。我們的新客承接能力翻倍了。」",
+        "\"3-min proposals replaced 3-hour spreadsheets. We doubled new-client capacity.\"": "“3 分鐘建議書替代了 3 小時表格。我們的新客承接能力翻倍了。”",
         "Director, mid-size HK broker firm": "香港中型經紀公司董事",
-        "\"95% renewal rate isn't marketing — it's a year-on-year audit number.\"": "「95% 續約率不是營銷話術，而是逐年審計數字。」",
+        "\"95% renewal rate isn't marketing — it's a year-on-year audit number.\"": "“95% 續約率不是行銷話術，而是逐年審計數字。”",
         "COO, bancassurance group": "銀行保險集團 COO",
-        "\"The AI catches policy mismatches our junior advisors used to miss.\"": "「AI 能發現初級顧問過去容易漏掉的保單不匹配。」",
         "Head of Compliance, MPF firm": "MPF 公司合規負責人",
+        "Broker teams.": "經紀團隊。",
+        "One trusted backbone.": "同一個可信底座。",
+        "Client operations run from one shared workspace.": "客戶導入、服務和保單營運可在同一個共享工作區中管理。",
+        "Use case · Operations team": "香港中型經紀公司董事",
+        "Structured workflows help teams reduce manual follow-up and improve renewal visibility.": "結構化工作流幫助團隊減少人工跟進，並提升續保可見性。",
+        "Use case · Management team": "銀行保險集團 COO",
+        "\"The AI catches policy mismatches our junior advisors used to miss.\"": "「AI 能發現初級顧問過去容易漏掉的保單不匹配。」",
+        "Use case · Compliance team": "MPF 公司合規負責人",
         "Awards & Credentials": "獎項與資質",
         "· Hong Kong InsurTech, recognised.": " · 獲認可的香港保險科技。",
-        "Founded in 2017 at HKSTP. Trusted by 160+ broker firms across Hong Kong, Macau and Singapore. Government-vetted, insurer-approved.": "2017 年創立於 HKSTP。獲得香港、澳門、新加坡 160+ 經紀公司信任。政府認可，保險公司批准。",
+        "Founded in Hong Kong and focused on insurance workflow digitisation for broker teams and ecosystem partners.": "專注為保險經紀團隊和生態夥伴提供保險工作流數字化能力。",
         "From HKSTP InnoCentre, since 2017.": "2017 年起，來自 HKSTP InnoCentre。",
-        "BeeFintech is Hong Kong's leading insurance SaaS, recognised by HK ICT Awards 2020 and incubated at HKSTP. We exist to make insurance professionals 10× more effective — without compromising on trust.": "BeeFintech 是香港領先的保險 B2B PaaS，獲 HK ICT Awards 2020 認可，並由 HKSTP 孵化。我們的目標是在不犧牲信任的前提下，讓保險專業人士效率提升 10 倍。",
+        "BeeFintech builds insurance workflow technology for broker teams and ecosystem partners. This demo site presents the product vision, interaction model, and public-facing conversion flow.": "BeeFintech 為保險經紀團隊和生態夥伴建設保險工作流技術。此演示站展示產品願景、交互模型和預約轉化流程。",
         "HQ": "總部",
         "Unit 505, InnoCentre, Kowloon Tong": "九龍塘 InnoCentre 505 室",
         "Founded": "成立",
         "Team": "團隊",
         "40+ engineers & insurance experts": "40+ 工程師與保險專家",
         "Backed by": "支持方",
-        "Ready to see Bee AI on your book of business?": "準備看看 Bee AI 如何服務你的業務組合了嗎？",
+        "Ready to see Bee AI in your brokerage workflow?": "準備看看 Bee AI 如何服務你的業務組合了嗎？",
         "Name": "姓名",
         "Company name": "公司名稱",
         "Position": "職位",
@@ -1871,8 +2089,8 @@
         "HK PDPO compliant": "符合香港 PDPO",
         "All data in Hong Kong": "所有資料位於香港",
         "ISO 27001 in progress": "ISO 27001 推進中",
-        "YF Life & FWD approved": "YF Life 與 FWD 認可",
-        "All systems operational · 99.99% uptime": "所有系統運行正常 · 99.99% 可用率"
+        "Demo content only": "僅作演示內容",
+        "Static demo · no production claim": "靜態演示 · 非生產承諾"
       }
     };
 
@@ -1948,7 +2166,9 @@
       document.querySelectorAll("[data-lang-choice]").forEach((button) => {
         button.classList.toggle("active", button.dataset.langChoice === nextLang);
       });
-      localStorage.setItem("beefintech-language", nextLang);
+      localStorage.setItem("beefintech_lang", nextLang);
+      refreshDefaultQuestionsForLanguage();
+      syncAiModeView();
     }
 
     const heroTitle = document.querySelector(".hero h1");
@@ -1968,7 +2188,9 @@
     const chatCredits = document.getElementById("chatCredits");
     const chatAnswer = document.getElementById("chatAnswer");
     const chatAnswerLabel = document.getElementById("chatAnswerLabel");
-    const chatCreditKey = "beefintech-chat-credits-v7";
+    const chatCreditKey = "beefintech_bee_ai_credits";
+    let activeAiMode = "compare";
+    let isSubmittingChat = false;
 
     function getChatCredits() {
       const raw = localStorage.getItem(chatCreditKey);
@@ -1981,6 +2203,7 @@
       const credits = Math.max(0, Math.min(3, value));
       localStorage.setItem(chatCreditKey, String(credits));
       chatCredits.textContent = `${credits} / 3`;
+      syncChatSubmitState();
     }
 
     function autoSizeChatInput() {
@@ -2013,6 +2236,11 @@
     demoForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!demoForm.reportValidity()) return;
+      const formData = Object.fromEntries(new FormData(demoForm).entries());
+      const existing = JSON.parse(localStorage.getItem("beefintech_bookings_demo") || "[]");
+      existing.push({ ...formData, created_at: new Date().toISOString() });
+      localStorage.setItem("beefintech_bookings_demo", JSON.stringify(existing));
+      console.log("[BOOKING DEMO]", formData);
       demoForm.classList.add("hidden");
       demoSuccess.classList.add("visible");
     });
@@ -2027,30 +2255,177 @@
       if (event.key === "Escape" && demoModal.classList.contains("open")) closeDemoModal();
     });
 
+    const aiModes = ["compare", "visualize", "ask"];
+
+    const aiModeQuestions = {
+      en: {
+        compare: "I'm 35, want retirement protection, budget HK$5,000/month. Compare 2-3 options.",
+        visualize: "Visualize a simple retirement protection scenario for a 35-year-old client with a monthly HK$5,000 budget.",
+        ask: "Can Bee AI help my brokerage team answer client questions faster while keeping the workflow compliant?"
+      },
+      "zh-Hans": {
+        
+        "Home": "首页",compare: "我 35 岁，希望配置退休保障，预算每月 HK$5,000。比较 2-3 个选项。",
+        visualize: "请为一位 35 岁、每月预算 HK$5,000 的客户，可视化一个退休保障方案。",
+        ask: "Bee AI 能帮助我的经纪团队更快回答客户问题，同时保持流程合规吗？"
+      },
+      "zh-Hant": {
+        
+        "Home": "首頁",compare: "我 35 歲，希望配置退休保障，預算每月 HK$5,000。比較 2-3 個選項。",
+        visualize: "請為一位 35 歲、每月預算 HK$5,000 的客戶，可視化一個退休保障方案。",
+        ask: "Bee AI 能幫助我的經紀團隊更快回答客戶問題，同時保持流程合規嗎？"
+      }
+    };
+
+    const answerTemplates = {
+      en: {
+        compare: `
+          <div class="product-cards">
+            <div class="mini-card"><strong>Retirement Savings</strong><div class="muted">Illustrative range</div><div class="bar"><span style="width:78%"></span></div><div class="muted">fit score</div></div>
+            <div class="mini-card"><strong>Annuity Income</strong><div class="muted">Illustrative range</div><div class="bar"><span style="width:86%"></span></div><div class="muted">fit score</div></div>
+            <div class="mini-card"><strong>Whole-life Savings</strong><div class="muted">Illustrative range</div><div class="bar"><span style="width:64%"></span></div><div class="muted">fit score</div></div>
+          </div>`,
+        visualize: `
+          <div class="scenario-card">
+            <div class="scenario-line"><strong>Protection gap</strong><div class="scenario-bar"><span style="width:62%"></span></div></div>
+            <div class="scenario-line"><strong>Cash-flow fit</strong><div class="scenario-bar"><span style="width:74%"></span></div></div>
+            <div class="scenario-line"><strong>Retirement runway</strong><div class="scenario-bar"><span style="width:81%"></span></div></div>
+          </div>`,
+        ask: `
+          <div class="answer-chat">
+            <div class="answer-bubble user">Can Bee AI help my team compare options faster?</div>
+            <div class="answer-bubble">Yes. In this demo, Bee AI structures product-category comparisons, highlights fit signals, and suggests the next workflow step.</div>
+            <div class="answer-bubble">For production use, signed clients connect Bee AI Broker to their approved product library and compliance process.</div>
+          </div>`
+      },
+      "zh-Hans": {
+        
+        "Home": "首页",compare: `
+          <div class="product-cards">
+            <div class="mini-card"><strong>退休储蓄</strong><div class="muted">示例区间</div><div class="bar"><span style="width:78%"></span></div><div class="muted">匹配分</div></div>
+            <div class="mini-card"><strong>年金收入</strong><div class="muted">示例区间</div><div class="bar"><span style="width:86%"></span></div><div class="muted">匹配分</div></div>
+            <div class="mini-card"><strong>终身寿险储蓄</strong><div class="muted">示例区间</div><div class="bar"><span style="width:64%"></span></div><div class="muted">匹配分</div></div>
+          </div>`,
+        visualize: `
+          <div class="scenario-card">
+            <div class="scenario-line"><strong>保障缺口</strong><div class="scenario-bar"><span style="width:62%"></span></div></div>
+            <div class="scenario-line"><strong>现金流适配</strong><div class="scenario-bar"><span style="width:74%"></span></div></div>
+            <div class="scenario-line"><strong>退休路径</strong><div class="scenario-bar"><span style="width:81%"></span></div></div>
+          </div>`,
+        ask: `
+          <div class="answer-chat">
+            <div class="answer-bubble user">Bee AI 能帮助团队更快比较方案吗？</div>
+            <div class="answer-bubble">可以。在这个演示中，Bee AI 会整理产品类别对比、突出匹配信号，并建议下一步工作流。</div>
+            <div class="answer-bubble">在正式使用中，签约客户会把 Bee AI Broker 接入已批准的产品库和合规流程。</div>
+          </div>`
+      },
+      "zh-Hant": {
+        
+        "Home": "首頁",compare: `
+          <div class="product-cards">
+            <div class="mini-card"><strong>退休儲蓄</strong><div class="muted">示例區間</div><div class="bar"><span style="width:78%"></span></div><div class="muted">匹配分</div></div>
+            <div class="mini-card"><strong>年金收入</strong><div class="muted">示例區間</div><div class="bar"><span style="width:86%"></span></div><div class="muted">匹配分</div></div>
+            <div class="mini-card"><strong>終身壽險儲蓄</strong><div class="muted">示例區間</div><div class="bar"><span style="width:64%"></span></div><div class="muted">匹配分</div></div>
+          </div>`,
+        visualize: `
+          <div class="scenario-card">
+            <div class="scenario-line"><strong>保障缺口</strong><div class="scenario-bar"><span style="width:62%"></span></div></div>
+            <div class="scenario-line"><strong>現金流適配</strong><div class="scenario-bar"><span style="width:74%"></span></div></div>
+            <div class="scenario-line"><strong>退休路徑</strong><div class="scenario-bar"><span style="width:81%"></span></div></div>
+          </div>`,
+        ask: `
+          <div class="answer-chat">
+            <div class="answer-bubble user">Bee AI 能幫助團隊更快比較方案嗎？</div>
+            <div class="answer-bubble">可以。在這個演示中，Bee AI 會整理產品類別對比、突出匹配信號，並建議下一步工作流。</div>
+            <div class="answer-bubble">在正式使用中，簽約客戶會把 Bee AI Broker 接入已批准的產品庫和合規流程。</div>
+          </div>`
+      }
+    };
+
+    const chatModeState = Object.fromEntries(aiModes.map((mode) => [mode, { question: "", dirty: false, answered: false }]));
+
+    function getCurrentLang() {
+      return translations[document.documentElement.lang] ? document.documentElement.lang : "en";
+    }
+
+    function getDefaultQuestion(mode) {
+      const lang = getCurrentLang();
+      return (aiModeQuestions[lang] && aiModeQuestions[lang][mode]) || aiModeQuestions.en[mode] || aiModeQuestions.en.compare;
+    }
+
+    function refreshDefaultQuestionsForLanguage() {
+      aiModes.forEach((mode) => {
+        const state = chatModeState[mode];
+        if (!state.dirty) state.question = getDefaultQuestion(mode);
+      });
+    }
+
+    function hideAiAnswer() {
+      chatCard.classList.remove("answered");
+      chatAnswer.innerHTML = "";
+    }
+
+    function renderAiAnswer() {
+      const lang = getCurrentLang();
+      const templates = answerTemplates[lang] || answerTemplates.en;
+      chatAnswer.innerHTML = templates[activeAiMode] || templates.compare;
+      chatCard.classList.add("answered");
+    }
+
+    function syncAiModeView() {
+      if (!chatQuestion || !chatCard) return;
+      const state = chatModeState[activeAiMode];
+      if (!state.question) state.question = getDefaultQuestion(activeAiMode);
+      chatQuestion.value = state.question;
+      autoSizeChatInput();
+      if (state.answered) renderAiAnswer();
+      else hideAiAnswer();
+    }
+    function syncChatSubmitState() {
+      const remaining = getChatCredits();
+      const submit = chatForm.querySelector(".chat-submit");
+      if (submit) submit.textContent = remaining <= 0 ? "↗" : "→";
+    }
+
     document.querySelectorAll(".demo-tabs .chip").forEach((button) => {
       button.addEventListener("click", () => {
         document.querySelectorAll(".demo-tabs .chip").forEach((item) => item.classList.remove("active"));
         button.classList.add("active");
+        activeAiMode = button.dataset.aiMode || "compare";
+        syncAiModeView();
       });
     });
 
-    chatQuestion.addEventListener("input", autoSizeChatInput);
+    chatQuestion.addEventListener("input", () => {
+      const state = chatModeState[activeAiMode];
+      state.question = chatQuestion.value;
+      state.dirty = chatQuestion.value !== getDefaultQuestion(activeAiMode);
+      autoSizeChatInput();
+    });
 
     chatForm.addEventListener("submit", (event) => {
       event.preventDefault();
+      if (isSubmittingChat) return;
       const remaining = getChatCredits();
       if (remaining <= 0) {
         openDemoModal();
         return;
       }
+      const state = chatModeState[activeAiMode];
       if (!chatQuestion.value.trim()) {
-        chatQuestion.focus();
-        return;
+        state.question = getDefaultQuestion(activeAiMode);
+        state.dirty = false;
+        chatQuestion.value = state.question;
+        autoSizeChatInput();
+      } else {
+        state.question = chatQuestion.value;
       }
+      isSubmittingChat = true;
+      state.answered = true;
       setChatCredits(remaining - 1);
-      chatCard.classList.add("answered");
+      renderAiAnswer();
+      window.setTimeout(() => { isSubmittingChat = false; }, 120);
     });
-
     languageToggle.addEventListener("click", () => {
       const open = languageSwitcher.classList.toggle("open");
       languageToggle.setAttribute("aria-expanded", String(open));
@@ -2071,10 +2446,69 @@
       }
     });
 
-    setLanguage(localStorage.getItem("beefintech-language") || "en");
+    const defaultLanguageResetKey = "beefintech_default_language_en_v1";
+    if (localStorage.getItem(defaultLanguageResetKey) !== "done") {
+      localStorage.setItem("beefintech_lang", "en");
+      localStorage.setItem(defaultLanguageResetKey, "done");
+    }
+
+    const chatCreditResetKey = "beefintech_bee_ai_credits_reset_v3";
+    if (localStorage.getItem(chatCreditResetKey) !== "done") {
+      localStorage.setItem(chatCreditKey, "3");
+      localStorage.setItem(chatCreditResetKey, "done");
+    }
+    refreshDefaultQuestionsForLanguage();
+    setLanguage(localStorage.getItem("beefintech_lang") || "en");
     setChatCredits(getChatCredits());
+    window.addEventListener("storage", (event) => {
+      if (event.key === chatCreditKey) setChatCredits(getChatCredits());
+    });
     autoSizeChatInput();
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
